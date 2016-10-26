@@ -13,10 +13,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        return true
+
+      window = UIWindow.init(frame: UIScreen.main.bounds)
+      let businessListViewController = BusinessListViewController()
+      let navigationViewController = UINavigationController(rootViewController: businessListViewController)
+      window?.rootViewController = navigationViewController
+      window?.makeKeyAndVisible()
+      return true
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
