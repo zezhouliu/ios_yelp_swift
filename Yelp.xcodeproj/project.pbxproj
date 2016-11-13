@@ -21,6 +21,10 @@
 		BF0720091DC053D500EF7367 /* BusinessListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0720081DC053D500EF7367 /* BusinessListViewController.swift */; };
 		BF07200B1DC053FC00EF7367 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07200A1DC053FC00EF7367 /* BaseViewController.swift */; };
 		BF5498361DC028440057331A /* YelpRestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5498351DC028440057331A /* YelpRestaurantTableViewCell.swift */; };
+		BFC4A9B61DD253290020C1EE /* YelpFilterSwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC4A9B51DD253290020C1EE /* YelpFilterSwitchTableViewCell.swift */; };
+		BFDDB7951DC4191700B14112 /* YelpFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDDB7941DC4191700B14112 /* YelpFilterViewController.swift */; };
+		BFE5F9F51DD819380059F584 /* MoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5F9F41DD819380059F584 /* MoreTableViewCell.swift */; };
+		BFE5F9F71DD828300059F584 /* AutoCollapseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5F9F61DD828300059F584 /* AutoCollapseTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,10 @@
 		BF0720081DC053D500EF7367 /* BusinessListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BusinessListViewController.swift; path = ViewControllers/BusinessListViewController.swift; sourceTree = "<group>"; };
 		BF07200A1DC053FC00EF7367 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = ViewControllers/BaseViewController.swift; sourceTree = "<group>"; };
 		BF5498351DC028440057331A /* YelpRestaurantTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YelpRestaurantTableViewCell.swift; path = Views/YelpRestaurantTableViewCell.swift; sourceTree = "<group>"; };
+		BFC4A9B51DD253290020C1EE /* YelpFilterSwitchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YelpFilterSwitchTableViewCell.swift; path = Views/YelpFilterSwitchTableViewCell.swift; sourceTree = "<group>"; };
+		BFDDB7941DC4191700B14112 /* YelpFilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YelpFilterViewController.swift; path = ViewControllers/YelpFilterViewController.swift; sourceTree = "<group>"; };
+		BFE5F9F41DD819380059F584 /* MoreTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoreTableViewCell.swift; path = Views/MoreTableViewCell.swift; sourceTree = "<group>"; };
+		BFE5F9F61DD828300059F584 /* AutoCollapseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoCollapseTableViewCell.swift; sourceTree = "<group>"; };
 		C79C0AC126EDAA235847CEA2 /* Pods_Yelp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yelp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF53DC2D7A8303A68532E7C6 /* Pods-Yelp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yelp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Yelp/Pods-Yelp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -166,6 +174,7 @@
 				22AAAA9B1AEA1EC300A544AF /* BusinessesViewController.swift */,
 				BF0720081DC053D500EF7367 /* BusinessListViewController.swift */,
 				BF07200A1DC053FC00EF7367 /* BaseViewController.swift */,
+				BFDDB7941DC4191700B14112 /* YelpFilterViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -201,6 +210,9 @@
 			isa = PBXGroup;
 			children = (
 				BF5498351DC028440057331A /* YelpRestaurantTableViewCell.swift */,
+				BFC4A9B51DD253290020C1EE /* YelpFilterSwitchTableViewCell.swift */,
+				BFE5F9F41DD819380059F584 /* MoreTableViewCell.swift */,
+				BFE5F9F61DD828300059F584 /* AutoCollapseTableViewCell.swift */,
 			);
 			name = TableViewCells;
 			sourceTree = "<group>";
@@ -418,12 +430,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFC4A9B61DD253290020C1EE /* YelpFilterSwitchTableViewCell.swift in Sources */,
 				22AAAA9C1AEA1EC300A544AF /* BusinessesViewController.swift in Sources */,
 				BF0720071DC036E100EF7367 /* UIView+Autolayout.swift in Sources */,
 				BF0720051DC02F8F00EF7367 /* NSLayoutConstraint+Autolayout.swift in Sources */,
+				BFE5F9F51DD819380059F584 /* MoreTableViewCell.swift in Sources */,
 				22AAAA991AEA0A9700A544AF /* Business.swift in Sources */,
 				BF0720091DC053D500EF7367 /* BusinessListViewController.swift in Sources */,
+				BFE5F9F71DD828300059F584 /* AutoCollapseTableViewCell.swift in Sources */,
 				BF07200B1DC053FC00EF7367 /* BaseViewController.swift in Sources */,
+				BFDDB7951DC4191700B14112 /* YelpFilterViewController.swift in Sources */,
 				BF5498361DC028440057331A /* YelpRestaurantTableViewCell.swift in Sources */,
 				222D8A7D19CCFAE000D2DB53 /* YelpClient.swift in Sources */,
 				222D8A5B19CCF9F900D2DB53 /* AppDelegate.swift in Sources */,

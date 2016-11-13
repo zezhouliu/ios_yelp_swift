@@ -43,6 +43,19 @@ class BusinessListViewController: BaseViewController {
 
     view.addSubview(tableView)
     navigationItem.titleView = searchBar
+
+    navigationItem.leftBarButtonItem = UIBarButtonItem(
+      title: "Filter",
+      style: .plain,
+      target: self,
+      action: #selector(BusinessListViewController.leftBarButtonPressed))
+  }
+
+  internal func leftBarButtonPressed(_ sender: AnyObject) {
+    let filterViewController = YelpFilterViewController()
+    let filterNavigationController = UINavigationController(rootViewController: filterViewController)
+    filterViewController.delegate = self
+    self.present(filterNavigationController, animated: true, completion: nil)
   }
 
   private func setupConstraints() {
@@ -53,7 +66,7 @@ class BusinessListViewController: BaseViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    searchWithTerm(term: "Restaurants")
+    searchWithTerm(term: activeTerm)
 
   }
 
@@ -72,6 +85,21 @@ class BusinessListViewController: BaseViewController {
   var businesses: [Business]?
   let tableView: UITableView
   let searchBar: UISearchBar
+  var activeTerm: String = "Restaurants"
+}
+
+extension BusinessListViewController: YelpFilterViewControllerDelegate {
+
+  func viewController(viewController: YelpFilterViewController, didChangeFilters: [String], sortMode: YelpSortMode, deals: Bool, distance: String) {
+
+    Business.searchWithTerm(term: activeTerm, sort: sortMode, categories: didChangeFilters, deals: deals, distance: distance, completion: {
+      (businesses: [Business]?, error: Error?) -> Void in
+      self.businesses = businesses
+      if businesses != nil {
+        self.tableView.reloadData()
+      }
+    })
+  }
 }
 
 extension BusinessListViewController: UITableViewDataSource {
@@ -111,7 +139,8 @@ extension BusinessListViewController: UISearchBarDelegate {
 
   public func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
     if let text = searchBar.text {
-      self.searchWithTerm(term: text)
+      activeTerm = text
+      self.searchWithTerm(term: activeTerm)
     }
   }
 }
